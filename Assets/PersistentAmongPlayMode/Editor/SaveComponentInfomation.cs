@@ -37,7 +37,7 @@ public class SaveComponentInfomation
 		var dic = new Dictionary<string, object> ();
 		var type = component.GetType ();
 		foreach (var field in type.GetFields()) {
-			if (field.GetCustomAttributes (typeof(SerializeParamAttribute), true).Length != 0) {
+			if (field.GetCustomAttributes (typeof(PersistentAmongPlayModeAttribute), true).Length != 0) {
 				dic.Add (field.Name, field.GetValue (component));
 			}
 		}
@@ -49,7 +49,7 @@ public class SaveComponentInfomation
 		var type = component.GetType ();
 		var dict = saveObjectDic [component.GetInstanceID ()];
 		foreach (var field in type.GetFields()) {
-			if (field.GetCustomAttributes (typeof(SerializeParamAttribute), true).Length != 0) {
+			if (field.GetCustomAttributes (typeof(PersistentAmongPlayModeAttribute), true).Length != 0) {
 				field.SetValue (component, dict [field.Name]);
 			}
 		}

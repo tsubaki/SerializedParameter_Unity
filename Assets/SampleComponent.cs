@@ -2,9 +2,9 @@
 
 public class SampleComponent : MonoBehaviour
 {
-	[SerializeParam]
+	[PersistentAmongPlayMode]
 	public string msg = string.Empty;
 	public int count = 0;
-	[SerializeParam]
+	[PersistentAmongPlayMode]
 	public int serializeCount = 0;
 }

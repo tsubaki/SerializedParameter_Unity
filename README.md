@@ -1,4 +1,4 @@
-SerializedParameter_Unity
+PersistentAmongPlayMode_Unity
 =========================
 
 エディタ上でゲーム実行時に変更したフィールド変数を保持します。
@@ -13,9 +13,23 @@ SerializedParameter_Unity
 
 #使い方
 
-publicの変数に[SerializeParam]を付ける。  
+publicの変数に[PersistentAmongPlayMode]を付ける。  
 構造体・クラス・プリミティブな値どれでも可…だと思う。
 
-![how to use](https://raw.github.com/tsubaki/SerializedParameter_Unity/gh-pages/04.jpg)
+```
+using UnityEngine;
+
+public class SampleComponent : MonoBehaviour
+{
+	[PersistentAmongPlayMode]
+	public string msg = string.Empty;
+
+	public int count = 0;
+
+	[PersistentAmongPlayMode]
+	public int serializeCount = 0;
+}
+```
+
 --
 This software is released under the MIT License, see LICENSE.txt.

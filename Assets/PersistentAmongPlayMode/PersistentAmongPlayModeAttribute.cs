@@ -3,4 +3,4 @@ using System.Collections;
 using System;
 
 [AttributeUsage(AttributeTargets.Field )]
-public class SerializeParamAttribute : Attribute {}
+public class PersistentAmongPlayModeAttribute : Attribute {}
